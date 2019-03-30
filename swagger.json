@@ -1,0 +1,43 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Perfect World Web API",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "{schema}://localhost:8000",
+            "description": "Localhost Development",
+            "variables": {
+                "schema": {
+                    "enum": [
+                        "https",
+                        "http"
+                    ],
+                    "default": "https"
+                }
+            }
+        }
+    ],
+    "paths": {
+        "/api/user/register": {
+            "get": {
+                "tags": [
+                    "User Register"
+                ],
+                "operationId": "App\\Http\\Controllers\\User\\RegisterController::register",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "User Register",
+            "description": "Register controller"
+        }
+    ]
+}
