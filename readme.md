@@ -1,3 +1,6 @@
+<p align="left"><img src="https://i.imgur.com/ef7Oecs.png"></p>
+
+
 # Perfect World Panel API
 
 Este projeto será utilizado como portfólio de desenvolvimento com backend, aceito pull requests de contribuidores.
