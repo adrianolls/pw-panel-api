@@ -3,10 +3,10 @@
 
 /**
  * @OA\Info(
- *   title="My first API",
+ *   title="Perfect World Panel API",
  *   version="1.0.0",
  *   @OA\Contact(
- *     email="support@example.com"
+ *     email="contato@adrianolls.dev"
  *   )
  * )
  * @OA\SecurityScheme(
