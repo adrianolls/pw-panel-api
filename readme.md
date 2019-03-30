@@ -1,4 +1,4 @@
-<p align="left"><a href="https://www.adrianolls.dev/" target="_blank"><img src="https://i.imgur.com/ef7Oecs.png"></p>
+<p align="left"><a href="https://www.adrianolls.dev/" target="_blank"><img src="https://i.imgur.com/ef7Oecs.png"></a></p>
 
 
 # Perfect World Panel API
