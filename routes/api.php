@@ -13,12 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['namespace' => 'User'], function () {
 
-    Route::group(['middleware' => 'guest'], function () {
-        Route::post('v1/user/register', 'RegisterController@register');
-        Route::get('v1/user/activate/{code}', 'RegisterController@activateUser');
+Route::group(['prefix' => 'v1'], function () {
+    Route::group(['namespace' => 'User'], function () {
+
+        Route::group(['middleware' => 'guest'], function () {
+            Route::post('user/register', 'RegisterController@register');
+            Route::get('user/activate/{code}', 'RegisterController@activateUser');
+        });
+
     });
-
-
 });

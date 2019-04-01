@@ -1,0 +1,91 @@
+openapi: 3.0.0
+info:
+  title: 'Perfect World Panel API'
+  contact:
+    email: contato@adrianolls.dev
+  version: 1.0.0
+paths:
+  /api/v1/user/register:
+    post:
+      tags:
+        - users
+      summary: 'Registra um usuário'
+      operationId: register
+      parameters:
+        -
+          name: login
+          in: query
+          description: 'Login da conta'
+          required: true
+          schema:
+            type: string
+        -
+          name: nickname
+          in: query
+          description: 'Apelido do jogador'
+          required: true
+          schema:
+            type: string
+        -
+          name: truename
+          in: query
+          description: 'Nome do usuário'
+          required: true
+          schema:
+            type: string
+        -
+          name: email
+          in: query
+          description: 'E-mail do usuário'
+          required: true
+          schema:
+            type: string
+        -
+          name: password
+          in: query
+          description: 'Senha do usuário'
+          required: true
+          schema:
+            type: string
+        -
+          name: repassword
+          in: query
+          description: 'Repetir senha do usuário'
+          required: true
+          schema:
+            type: string
+        -
+          name: terms
+          in: query
+          description: 'Termos de uso'
+          required: true
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: 'Conta é ativada ou dispara email de ativação'
+  '/api/v1/user/activate/{code}':
+    get:
+      tags:
+        - users
+      summary: 'Ativa a conta de um usuário'
+      operationId: activateUser
+      parameters:
+        -
+          name: code
+          in: path
+          description: 'Código de ativação de conta'
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'Ativa um código enviado pelo email e gera uma nova conta no sistema'
+components:
+  securitySchemes:
+    apiToken:
+      type: apiKey
+      description: 'Token do client para consumo da API'
+      name: Authorization
+      in: header
+      scheme: bearer
