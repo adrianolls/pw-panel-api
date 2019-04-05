@@ -46,7 +46,7 @@ class UserRegisterNotification extends Notification
     {
         return (new MailMessage)
             ->line('Enable your account using the button down bellow.')
-            ->action('Enable Account', url('api/v1/user/activate/' . $this->userPending->code))
+            ->action('Enable Account', env('FRONTEND_URL') . '/activateuser/' . $this->userPending->code)
             ->line('Thanks for choosing our server!');
     }
 
